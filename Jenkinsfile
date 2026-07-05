@@ -11,9 +11,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                dir('D:\\DevoPS\\DevOps-Learning\\project') {
-                    bat 'docker build -t my-first-devops-app .'
-                }
+                bat 'docker build -t my-first-devops-app .'
             }
         }
 
@@ -34,6 +32,7 @@ pipeline {
                 bat 'docker run -d -p 3000:3000 --name myapp my-first-devops-app'
             }
         }
+
     }
 
     post {
